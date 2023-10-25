@@ -76,6 +76,15 @@ assert the_titler('cUpCaKeS') == 'Cupcakes'
 print("Exercise 4 is correct")
 
 # Exercise 5
+# Define a function to accept a tip percentage, bill total, and
+# return the amount to tip
+def calculate_tip(tip_perc,bill):
+    return round(tip_perc * bill,2)
+    
+assert calculate_tip(0.2,20) == 4
+assert calculate_tip(0.13,30) == 3.9
+assert calculate_tip(0.25,20) == 5
+
 # Exercise 6
 # Exercise 7
 # Exercise 8
