@@ -6,5 +6,5 @@ This repo is being used for the Codeup Python section of instruction. Please not
 01. python_introduction_exercises
 02. data_types_and_variables
 03. control_structures_exercises
-04. functions_exercises (In Progress)
+04. functions_exercises
 05. import_exercises (Incomplete)
