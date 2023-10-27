@@ -31,7 +31,7 @@ assert is_two(2) == True
 assert is_two('2') == True
 assert is_two(4) == False
 assert is_two('aeiou') == False
-print("Exercise 1 is correct")
+# print("Exercise 1 is correct")
 
 
 #%%
@@ -67,7 +67,7 @@ assert is_vowel('c') == False
 assert is_vowel('A') == True
 assert is_vowel('H') == False
 assert is_vowel('assert') == False
-print("Exercise 2 is correct")
+# print("Exercise 2 is correct")
 
 #%%
 # Exercise 3
@@ -99,7 +99,7 @@ assert is_consonant('B') == True
 assert is_consonant('8') == False
 assert is_consonant('i') == False
 assert is_consonant('Y') == True
-print('Exercise 3 is correct')
+# print('Exercise 3 is correct')
 
 #%%
 # Exercise 4
@@ -131,7 +131,7 @@ assert the_titler('word') == 'Word'
 assert the_titler('android') == 'android'
 assert the_titler('forewarned') == 'Forewarned'
 assert the_titler('cUpCaKeS') == 'Cupcakes'
-print("Exercise 4 is correct")
+# print("Exercise 4 is correct")
 
 #%%
 # Exercise 5
