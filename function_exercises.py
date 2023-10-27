@@ -185,7 +185,7 @@ def apply_discount(price,discount):
 
 assert apply_discount(50, .10) == 45
 assert apply_discount(79.99, .2) == 63.99
-print('Exercise 6 is correct')
+# print('Exercise 6 is correct')
 
 #%%
 # Exercise 7
@@ -208,7 +208,7 @@ def handle_commas(num_string):
 
 assert handle_commas('1,000') == 1000
 assert handle_commas('1,234,567,890') == 1234567890
-print('Exercise 7 is correct')
+# print('Exercise 7 is correct')
 
 #%%
 # Exercise 8
@@ -242,7 +242,7 @@ assert get_letter_grade(79) == 'C'
 assert get_letter_grade(84) == 'B'
 assert get_letter_grade(15) == 'F'
 assert get_letter_grade(99) == 'A'
-print('Exercise 8 is correct')
+# print('Exercise 8 is correct')
 
 #%%
 # Exercise 9
@@ -275,7 +275,7 @@ assert remove_vowels('Pinochle') == 'Pnchl'
 assert remove_vowels('On') == 'n'
 assert remove_vowels('The') == 'Th'
 assert remove_vowels('Weekend') == 'Wknd'
-print('Exercise 9 is correct')       
+# print('Exercise 9 is correct')       
     
 #%%
 # Exercise 10
@@ -323,7 +323,7 @@ def normalize_name(string):
 assert normalize_name('%# var name 10') == 'var_name_10'
 assert normalize_name('agATHa&*49  ') == 'agatha_49'
 assert normalize_name('  495 %3 uLT-vaR 10&^  ') == 'ult_var_10'
-print('Exercise 10 is correct')
+# print('Exercise 10 is correct')
 
 #%%
 # Exercise 11
@@ -356,7 +356,7 @@ def cumulative_sum(numbers):
 assert cumulative_sum([1,2,3,4]) == [1,3,6,10]
 assert cumulative_sum([1,1,1]) == [1,2,3]
 assert cumulative_sum([2,4,8,16]) == [2,6,14,30]
-print('Exercise 11 is correct')
+# print('Exercise 11 is correct')
 
 #%%
 ### Additional Exercise
