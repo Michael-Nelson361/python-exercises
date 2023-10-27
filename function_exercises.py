@@ -64,6 +64,7 @@ assert is_vowel('a') == True
 assert is_vowel('c') == False
 assert is_vowel('A') == True
 assert is_vowel('H') == False
+assert is_vowel('assert') == False
 print("Exercise 2 is correct")
 
 # Exercise 3
@@ -131,7 +132,7 @@ print("Exercise 4 is correct")
 # Exercise 5
 # Define a function to accept a tip percentage, bill total, and
 # return the amount to tip
-def calculate_tip(tip_perc,bill):
+def calculate_tip(bill, tip_perc = 0.2):
     """
     Returns the amount to tip based on the bill.
 
@@ -150,9 +151,9 @@ def calculate_tip(tip_perc,bill):
     """
     return round(tip_perc * bill,2)
     
-assert calculate_tip(0.2,20) == 4
-assert calculate_tip(0.13,30) == 3.9
-assert calculate_tip(0.25,20) == 5
+assert calculate_tip(20,0.2) == 4
+assert calculate_tip(30,0.13) == 3.9
+assert calculate_tip(20,0.25) == 5
 
 # Exercise 6
 # Define a function to accept an original price, discount percent, and 
@@ -205,17 +206,17 @@ print('Exercise 7 is correct')
 # Exercise 8
 def get_letter_grade(grade):
     """
-    
+    Returns a letter grade for an integer given
 
     Parameters
     ----------
-    grade : TYPE
-        DESCRIPTION.
+    grade : int
+        Expects an integer likely between 0 and 100.
 
     Returns
     -------
     str
-        DESCRIPTION.
+        Based on value given, returns letter grade F-A as string.
 
     """
     if grade >= 90:
@@ -238,17 +239,17 @@ print('Exercise 8 is correct')
 # Exercise 9
 def remove_vowels(string):
     """
-    
+    Removes vowels from a given string.
 
     Parameters
     ----------
-    string : TYPE
-        DESCRIPTION.
+    string : str
+        Expects a string of any length.
 
     Returns
     -------
-    string : TYPE
-        DESCRIPTION.
+    string : str
+        Returns a transformed string containing no vowels.
 
     """
     vowels = ['a','e','i','o','u']
@@ -270,17 +271,17 @@ print('Exercise 9 is correct')
 # Exercise 10
 def normalize_name(string):
     """
-    
+    Transforms a given string into Python snake case
 
     Parameters
     ----------
-    string : TYPE
-        DESCRIPTION.
+    string : str
+        Expects a string of any length.
 
     Returns
     -------
-    string : TYPE
-        DESCRIPTION.
+    string : str
+        Returns a string with special characters removed according to Python naming convention.
 
     """
     # Initialize any variables needed
@@ -317,17 +318,19 @@ print('Exercise 10 is correct')
 # Exercise 11
 def cumulative_sum(numbers):
     """
-    
+    Given a list of numbers, returns a list of numbers with each subsequent number
+    added to the previous.
+    EXAMPLE: [1,2,3] becomes [1,3,6]
 
     Parameters
     ----------
-    numbers : TYPE
-        DESCRIPTION.
+    numbers : list
+        Expects a list of numbers as input.
 
     Returns
     -------
-    new_numbers : TYPE
-        DESCRIPTION.
+    new_numbers : list
+        Returns a list of numbers that are summed cumulatively.
 
     """
     curr_sum = 0
