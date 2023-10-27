@@ -5,7 +5,7 @@ Created on Wed Oct 25 10:03:02 2023
 
 @author: manelson
 """
-
+#%%
 # Exercise 1:
 # Return True if input is the number 2 or string 2
 def is_two(x):
@@ -33,6 +33,8 @@ assert is_two(4) == False
 assert is_two('aeiou') == False
 print("Exercise 1 is correct")
 
+
+#%%
 # Exercise 2
 # Return true if the passed string is a vowel and false otherwise
 def is_vowel(x):
@@ -67,6 +69,7 @@ assert is_vowel('H') == False
 assert is_vowel('assert') == False
 print("Exercise 2 is correct")
 
+#%%
 # Exercise 3
 # Return True if the string is a consonant, False otherwise
 # Use the is_vowel function to accomplish this
@@ -98,6 +101,7 @@ assert is_consonant('i') == False
 assert is_consonant('Y') == True
 print('Exercise 3 is correct')
 
+#%%
 # Exercise 4
 # Define a function that accepts a string that is a word.
 # The function should capitalize the first letter of the word if the word
@@ -129,6 +133,7 @@ assert the_titler('forewarned') == 'Forewarned'
 assert the_titler('cUpCaKeS') == 'Cupcakes'
 print("Exercise 4 is correct")
 
+#%%
 # Exercise 5
 # Define a function to accept a tip percentage, bill total, and
 # return the amount to tip
@@ -155,6 +160,7 @@ assert calculate_tip(20,0.2) == 4
 assert calculate_tip(30,0.13) == 3.9
 assert calculate_tip(20,0.25) == 5
 
+#%%
 # Exercise 6
 # Define a function to accept an original price, discount percent, and 
 # returns the prices after discount is applied
@@ -181,6 +187,7 @@ assert apply_discount(50, .10) == 45
 assert apply_discount(79.99, .2) == 63.99
 print('Exercise 6 is correct')
 
+#%%
 # Exercise 7
 def handle_commas(num_string):
     """
@@ -203,6 +210,7 @@ assert handle_commas('1,000') == 1000
 assert handle_commas('1,234,567,890') == 1234567890
 print('Exercise 7 is correct')
 
+#%%
 # Exercise 8
 def get_letter_grade(grade):
     """
@@ -236,6 +244,7 @@ assert get_letter_grade(15) == 'F'
 assert get_letter_grade(99) == 'A'
 print('Exercise 8 is correct')
 
+#%%
 # Exercise 9
 def remove_vowels(string):
     """
@@ -268,6 +277,7 @@ assert remove_vowels('The') == 'Th'
 assert remove_vowels('Weekend') == 'Wknd'
 print('Exercise 9 is correct')       
     
+#%%
 # Exercise 10
 def normalize_name(string):
     """
@@ -315,6 +325,7 @@ assert normalize_name('agATHa&*49  ') == 'agatha_49'
 assert normalize_name('  495 %3 uLT-vaR 10&^  ') == 'ult_var_10'
 print('Exercise 10 is correct')
 
+#%%
 # Exercise 11
 def cumulative_sum(numbers):
     """
@@ -346,8 +357,22 @@ assert cumulative_sum([1,2,3,4]) == [1,3,6,10]
 assert cumulative_sum([1,1,1]) == [1,2,3]
 assert cumulative_sum([2,4,8,16]) == [2,6,14,30]
 print('Exercise 11 is correct')
+
+#%%
 ### Additional Exercise
 
 # - Once you've completed the above exercises, 
 # follow the directions from https://gist.github.com/zgulde/ec8ed80ad8216905cda83d5645c60886 
 # in order to thouroughly comment your code to explain your code.
+
+### Bonus
+
+#%%
+# Bonus 1
+def twelveto24(time, reverse = False):
+    if reverse == False:
+        # Store 
+        pass
+    
+    
+    
