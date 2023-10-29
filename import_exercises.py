@@ -73,7 +73,7 @@ print(f'Total number of inactive users: {len(inactive)}')
 #%%
     # Grand total of balances for all users
 # Isolate the balances
-str_balance = [i.get('balance') for i in profiles]
+str_balance = [i['balance'] for i in profiles]
 
 # Convert strings into decimals for easier usage
 flt_balances = [float(i[1:].replace(',','_')) for i in str_balance]
@@ -95,7 +95,7 @@ min_balance = min(flt_balances)
 
 # match smallest balance to their user
 for i in profiles:
-    if i.get('balance') == f'${min_balance:,.2f}':
+    if i['balance'] == f'${min_balance:,.2f}':
         min_balance_user = i
 
 # Print user with lowest balance
@@ -108,7 +108,7 @@ max_balance = max(flt_balances)
 
 # Match balance to user
 for i in profiles:
-    if i.get('balance') == f'${max_balance:,.2f}':
+    if i['balance'] == f'${max_balance:,.2f}':
         max_balance_user = i
 
 # Print user with highest balance
@@ -117,17 +117,51 @@ print(f'User with highest balance: {max_balance_user.get("name")}')
 
 #%%
     # Most common favorite fruit
-# Try the group by function
-fav_fruits = list(it.groupby([i.get('favoriteFruit') for i in profiles]))
-print(fav_fruits)
+# Make a dictionary holding the fruits and count
+fruit_count = {}
+for i in profiles:
+    if i['favoriteFruit'] in fruit_count:
+        fruit_count.update({i['favoriteFruit']:fruit_count[i['favoriteFruit']]+1})
+    else:
+        fruit_count.update({i.get('favoriteFruit'):1})
 
+# Split dictionary into lists for better indexing
+fruit_list = list(fruit_count.keys())
+count_list = list(fruit_count.values())
+
+# Match max of the values to a fruit
+# First get the max of the count_list and send that to an indexing of count_list
+# That index value is then used to return the value at that same index in fruit_list
+most_common = fruit_list[count_list.index(max(count_list))]
+print(f'The most common favorite fruit is {most_common}.')
 
 #%%
     # Least most common favorite fruit
-
+# Match min of the values to a fruit
+# First get the min of the count_list and send that to an indexing of count_list
+# That index value is then used to return the value at that same index in fruit_list
+least_common = fruit_list[count_list.index(min(count_list))]
+print(f'The least most common favorite fruit is {least_common}.')
 
 #%%
     # Total number of unread messages for all users
+# Get a list of the messages
+# These messages are split up into a list of words within a list of messages
+messages = [i['greeting'].split() for i in profiles]
+# print(messages)
+message_count = 0
+
+# Iterate over the list of messages
+for i in messages:
+    
+    # Iterate over the list of words per message
+    for x in i:
+        
+        # Only count the items that contain numbers
+        if x.isdigit() == True:
+            message_count += int(x)
+
+print(f'There is a total of {message_count} unread messages.')
 
 #%%
 ### Bonus
