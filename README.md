@@ -7,4 +7,4 @@ This repo is being used for the Codeup Python section of instruction. Please not
 02. data_types_and_variables
 03. control_structures_exercises
 04. functions_exercises
-05. import_exercises (Incomplete)
+05. import_exercises
