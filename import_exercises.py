@@ -165,8 +165,29 @@ print(f'There is a total of {message_count} unread messages.')
 
 #%%
 ### Bonus
+
 """
     Continue to use the list of dictionaries
 """
-# Find out how many unique tags there are for all users
-# Display a user's name and all of their respective friends
+bonus = 'Bonus Exercises'
+
+# Decorative wrapping!
+print()
+print('*'*len(bonus)*2+'*')
+print((len(bonus)//2)*'*',bonus,(len(bonus)//2)*'*')
+print('*'*len(bonus)*2+'*')
+print()
+
+#%%
+    # Find out how many unique tags there are for all users
+# Use a set to isolate unique values
+unique_tags = set(())
+
+# Add the tags to the set created
+for i in profiles:
+    # print(i['tags'])
+    unique_tags.update(i['tags'])
+print(f'There are {len(unique_tags)} unique tags for all users.')
+
+#%%
+    # Display a user's name and all of their respective friends
